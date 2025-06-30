@@ -26,7 +26,8 @@ let MyObj={
     age : 21
 }
 
+
+//we can store a function in a variable
 let MyFunc=function(){
     console.log("Hello World!!");
-    
 }
