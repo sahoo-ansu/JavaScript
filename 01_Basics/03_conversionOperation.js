@@ -24,3 +24,31 @@ console.log(boolIsLoggedIn)
 //"0" => true; "1" => true; 
 // 0 => false
 
+// ****************** Operations ***************
+
+let num=3
+let negnum=-num
+console.log(negnum)
+
+// console.log(3+3);
+// console.log(3-3);
+// console.log(3*3);
+// console.log(3**3);
+// console.log(3/4);
+// console.log(3%4);
+
+let str1="Hello"
+let str2="Ansuman"
+
+let str3=str1+str2
+// console.log(str3)
+
+let gameCounter=100
+// gameCounter++
+++gameCounter
+console.log(gameCounter)
+
+
+
+
+
