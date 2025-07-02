@@ -23,7 +23,7 @@ console.log(id===anotherId); //false
 const heros=["superman" , "shaktiman" , "Krish"];
 let MyObj={
     name:"Ansuman",
-    age : 21
+    age : 21,
 }
 
 
@@ -31,3 +31,29 @@ let MyObj={
 let MyFunc=function(){
     console.log("Hello World!!");
 }
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+let name="amit"
+
+let anothername=name
+anothername="ansuman"
+
+console.log(name);
+console.log(anothername);
+
+let obj1={
+    email:"abc@gmail.com",
+    upi:"abc@ybl"
+}
+
+let anotherObj=obj1
+anotherObj.email="def@gmail.com"
+
+// console.log(obj1.email)          // def@gmail.com
+// console.log(anotherObj.email);    // def@gmail.com
+
+
+
