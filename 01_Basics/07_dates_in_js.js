@@ -18,6 +18,22 @@ console.log(MyTimeStamp);   // 1751548191467
 console.log(myCreatedDate.getTime());   //1749859200000
 console.log(Math.floor(Date.now()/1000));   //1751548328
 
+let newDate=new Date()
+console.log(newDate);   //2025-07-09T11:30:09.053Z
+console.log(newDate.getDay());   //3
+console.log(newDate.getDate());  //9
+console.log(newDate.getHours()); //11
+console.log(newDate.getMonth());  //6
+
+let md=newDate.toLocaleString('default',{                 //change the format
+    weekday:"long",
+    month:"long"
+})                                        
+console.log(md);  //July Wednesday
+
+
+
+
 
 
 
