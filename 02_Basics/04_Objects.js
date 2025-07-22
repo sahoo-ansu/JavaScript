@@ -30,7 +30,7 @@ const obj2={3:"a",4:"b"}
 // console.log(obj3);         //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
 const obj3={...obj1,...obj2}     //spread method
-console.log(obj3);      //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+// console.log(obj3);      //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
 const users=[
     {
@@ -46,15 +46,47 @@ const users=[
         mail:"c@gmail.com"
     }
 ]                       //array of objects
-console.log(users[1].id);    //423
+// console.log(users[1].id);    //423
 
-console.log(tinderUser);      //{ id: 'abc123', name: 'abc', mail: 'abc@gmail.com' }
+// console.log(tinderUser);      //{ id: 'abc123', name: 'abc', mail: 'abc@gmail.com' }
 
-console.log(Object.keys(tinderUser))     //[ 'id', 'name', 'mail' ]
-console.log(Object.values(tinderUser));   //[ 'abc123', 'abc', 'abc@gmail.com' ]
-console.log(Object.entries(tinderUser));   //[ [ 'id', 'abc123' ], [ 'name', 'abc' ], [ 'mail', 'abc@gmail.com' ] ]
+// console.log(Object.keys(tinderUser))     //[ 'id', 'name', 'mail' ]
+// console.log(Object.values(tinderUser));   //[ 'abc123', 'abc', 'abc@gmail.com' ]
+// console.log(Object.entries(tinderUser));   //[ [ 'id', 'abc123' ], [ 'name', 'abc' ], [ 'mail', 'abc@gmail.com' ] ]
 
-console.log(tinderUser.hasOwnProperty('id'));  //true
-console.log(tinderUser.hasOwnProperty('ID'));  //false
+// console.log(tinderUser.hasOwnProperty('id'));  //true
+// console.log(tinderUser.hasOwnProperty('ID'));  //false
 
 
+const course={
+    courseName:"JavaScript",
+    price:"999",
+    courseInstructor:"xyz"
+}
+
+console.log(course.courseInstructor);    //xyz
+
+// de-structure
+
+// const {courseInstructor}=course      //now we can use only courseInstructor to get value , we don't need course.courseInstructor
+// console.log(courseInstructor);    //xyz        
+
+const {courseInstructor:instructor}=course    //now we can rename the attribute
+console.log(instructor);    //xyz
+
+// JSON-JavaScript Object Notation
+
+//JSON syntax
+
+// {
+//     "name":"ansuman",
+//     "email":"ansuman@gmail.com",
+//     "course":"JavaScript"
+// }                                        //it looks like object but not object, it is a JSON format
+                                            //In JSON format, key is also a string 
+
+[
+    {},
+    {},
+    {}
+]        // it is also a JSON format
