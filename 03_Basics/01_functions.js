@@ -66,3 +66,51 @@ function loginUserMessage(userName="sam"){
 
 console.log(loginUserMessage());    //sam just loggedd in      //if the empty string passed then it by default takes the default value
 console.log(loginUserMessage("ansuman"));     //ansuman just loggedd in
+
+
+// function calculateCartPrice(num1){
+//     return num1
+// }
+// console.log(calculateCartPrice(100,200,300,400));     //100    //the function takes the first value only i.e 100
+
+// function calculateCartPrice(...num1){        //rest method not spread method (depends on use case)
+//     return num1
+// }
+// console.log(calculateCartPrice(100,200,300,400));         //[ 100, 200, 300, 400 ]     
+
+function calculateCartPrice(num2,num3,...num1){       
+    return num1
+}
+console.log(calculateCartPrice(100,200,300,400));         //[ 300, 400 ]   //num2,num3 takes first 2 parameter ,rest of the parameters bundle to num1
+
+
+const user={
+    username:"ansuman",
+    price:"999"
+}
+
+function handleObject(anyObject){
+    console.log(`username : ${anyObject.username},price : ${anyObject.price}`)
+}
+
+// handleObject(user)       //username : ansuman,price : 999
+handleObject({
+    username:"sam",
+    price:777
+})                  //username : sam,prices : 777
+
+// function handleObject(anyObject){
+//     console.log(`username : ${anyObject.username},prices : ${anyObject.prices}`)
+// } 
+
+// handleObject(user)              //username : ansuman,prices : undefined   //in user object, there is no "prices" key
+
+
+const myNewArray=[100,200,300,400,500]
+
+function returnFirstValue(anyArray){
+    return anyArray[0]
+}
+
+// console.log(returnFirstValue(myNewArray));     //100
+console.log(returnFirstValue([200,300,400,500]));      //200
