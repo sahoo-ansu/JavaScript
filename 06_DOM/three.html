@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom4</title>
+</head>
+<body style="background-color: #212121; color: azure;">
+    
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div);
+
+    div.className='main'
+    div.id=Math.round(Math.random() * 10 + 1)
+    div.setAttribute('title','mytitle')
+
+    div.style.backgroundColor='green'
+    div.style.padding='12px'
+    // div.innerText='hii ansuman'
+    const text=document.createTextNode('hii ansuman')
+    div.appendChild(text)
+
+    document.body.appendChild(div)
+    
+</script>
+
+</html>
