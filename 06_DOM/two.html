@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <div class="parent">
+        <!-- comment -->
+        <div class="day">sunday</div>
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children)   //gives all the sections under parent class
+    // console.log(parent.children[1].innerHTML)  //monday
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML)
+    // }
+
+    parent.children[1].style.color='orange'
+    // console.log(parent.firstElementChild);  //gives 1st child element
+    // console.log(parent.lastElementChild);    //gives last child element
+
+    const dayOne=document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);     //gives parent of the element
+    console.log(dayOne.nextElementSibling);  //gives sibling element
+
+    console.log('nodes',parent.childNodes);    //childrens and childNodes are not same. both are different
+   
+</script>
+    
+</html>
