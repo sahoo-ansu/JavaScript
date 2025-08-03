@@ -27,6 +27,22 @@
     optiaddLanguage('c++')
 
     //edit
+    // const language=document.querySelector('.language')
+    // const lastLanguage=language.lastElementChild
+    // lastLanguage.innerHTML='c#'
+
+    const secondLang=document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML='Typescript'
+    const newli=document.createElement('li')
+    newli.innerText='typescript'
+    secondLang.replaceWith(newli)
+
+    const firstLang=document.querySelector('li:first-child')
+    firstLang.outerHTML='<li>Js</li>'
+
+    //remove
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
     
 </script>
 </html>
