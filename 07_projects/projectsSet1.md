@@ -71,3 +71,14 @@ form.addEventListener('submit',(e)=>{
   }
 })
  ```
+
+ ## project 3
+
+ ```javascript
+const clock=document.querySelector('#clock')
+
+setInterval(()=>{
+  let date=new Date()
+  clock.innerHTML=date.toLocaleTimeString()
+},1000)       //setInterval takes 2 parameter. one is a function, another is time in millisecond, function will execute per that time
+ ```
