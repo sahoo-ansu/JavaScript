@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #212121; color: beige;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <!-- <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl clicked')" ></li> this method is not efficient,issue comes in bigger project -->
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick= ()=>{
+    //     alert('owl clicked ')                //this method is not efficient
+    // }
+
+     // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').addEventListener('click',(e)=>{       //in addEventListener there is 3 parameter 
+    //     alert('again owl clicked')                                       // 1-event type like click,submit or any activity   
+    //                                                                      // 2- function, it takes a parameter   
+    // },false)                                                             // 3-true(for capturing -> outside to inside execution )/false(for bubling -> inside to outside execution ), by default it is false
+    
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('clicked inside the ul')
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('owl clicked')
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log('owl clicked')
+    //     e.stopPropagation()         //op:- owl clicked     //   before the js propagate the events in capturing and bubbling phase, but now it prevents to propagate the events
+    // },false)
+
+    /*
+    when the 3rd parameter is false (bubling), if click on owl then the console output is :-
+    owl clicked
+    clicked inside the ul              //inside->outside
+
+    when the 3rd parameter is true(capturing), if click on owl then the console output is :-
+    clicked inside the ul
+    owl clicked                       //outside->inside
+
+    its the difference.
+    */
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()              //it prevents the click, before when the google is clicked it takes to google website but now it is prevented
+    //     e.stopPropagation()
+    //     console.log('google clicked');
+    // })
+
+
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        console.log(e.target.tagName)
+        if(e.target.tagName==='IMG'){
+            const removeit=e.target.parentNode
+            removeit.remove()
+        }
+    })
+</script>
+</html>
