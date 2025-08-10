@@ -180,6 +180,34 @@ function newGame(){
 }
  ```
 
+ ## project 5
+
+ ```javascript
+// console.log('Project 5');
+
+const table=document.getElementById('insert')
+
+window.addEventListener('keydown',(e)=>{
+  table.innerHTML=`
+  <div class='color'>
+  <table>
+  <tr>
+    <th>key</th>
+    <th>KeyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key==' '?'space':e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+  </div>`
+})
+
+ ```
+
  ## project 6
 
  ```javascript
