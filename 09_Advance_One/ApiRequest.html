@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aquamarine;">
+state    
+  0       	UNSENT	Client has been created. open() not called yet.
+  1       	OPENED	open() has been called.
+  2       	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+  3       	LOADING	Downloading; responseText holds partial data.
+  4       	DONE	The operation is complete.
+</body>
+<script>
+    const url='https://api.github.com/users/sahoo-ansu'
+    const xhr=new XMLHttpRequest();
+    // console.log(xhr.readyState);              //0
+    xhr.open('GET',url)
+    // console.log(xhr.readyState);               //1
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);              //2 //3 //4   //onreadystate-Fired whenever the readyState property changes. Also available via the onreadystatechange event handler property.
+        if(xhr.readyState==4){
+            // const user=xhr.response          
+            // console.log(typeof user);         //string     //the response I get it is in string,sometimes it is in object or any other type
+            const user=JSON.parse(xhr.response)                //now the response is in object/JSON type
+            console.log(user);
+            console.log(user.followers);
+        }
+    }
+
+    xhr.send();        // The XMLHttpRequest method send() sends the request to the server.
+    
+    
+    
+</script>
+</html>
