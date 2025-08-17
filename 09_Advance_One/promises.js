@@ -8,8 +8,6 @@ const promiseOne=new Promise(function(resolve,reject){
 
 promiseOne.then(function(){
     console.log('promise consumed');
-    console.log('return 1');
-    return 1
 })
 
 
@@ -78,3 +76,22 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+
+// async function getAllUsers(){
+//     try {
+//         const response=await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data=await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+    
+// }
+
+// getAllUsers()
+
+fetch('https://api.github.com/users/sahoo-ansu')
+.then((response)=>response.json())
+.then((data)=>console.log(data))
+.catch((e)=> console.log(e))
